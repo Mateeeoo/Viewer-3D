@@ -1,0 +1,58 @@
+body {
+    background: #222;
+    color: #fff;
+    margin: 0;
+  }
+  h2{
+    text-align: center;
+  }
+  
+  gltf-modelviewer {
+    display: block;
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+    float: left;
+  
+  }
+  .configuratorButtons {
+    background-color: blueviolet;
+    width: 30%;
+    height: 100vh;
+    float: left;
+    text-align: center; 
+  }
+  label {
+    border: 1px solid grey;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  button{
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid grey;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .colorButtons{
+    background-color: aquamarine;
+  }
+  /* 
+  .obejmaButtons{
+    background-color: aquamarine;
+  }
+  
+  .slizgiButtons{
+    background-color: aquamarine;
+  }
+  
+  .zapasButtons{
+    background-color: aquamarine;
+  }
+  
+  .koloButtons{
+    background-color: aquamarine;
+  } */

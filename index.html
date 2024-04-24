@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js" type="module"></script>
+  <script src="https://unpkg.com/three@0.138.3/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.138.3/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://unpkg.com/three@0.138.3/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- <script src="script.js" defer></script>  -->
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!-- <button id="toggleButton">Toggle Part Visibility</button> -->
+    <!-- <canvas id="myCanvas"></canvas> -->
+    <div class="canvas-conteiner">
+        <canvas id="renderCanvas"></canvas>
+        <div class="configuratorButtons">
+            <div id="buttonsPainting">
+                <h2>Kolor przyczepy</h2>
+            </div>
+            <div id="buttonsObejma">
+                <h2>Rodzaj obejmy</h2>
+            </div>
+            <div id="buttonsSlizgi">
+                <h2>Rodzaj ślizgów</h2>
+            </div>
+            <div id="buttonsKoloZapasowe">
+                <h2>Koło zapasowe</h2>
+            </div>
+            <div id="buttonsKolo">
+                <h2>Rodzaj felg</h2>
+            </div>
+        </div>
+        
+        <gltf-modelviewer role="img" src="SKW-1NH.glb"></gltf-modelviewer>
+    </div>
+<!--     
+    <p class="sds">. - class</p>
+    <p id="213"> # - id</p> -->
+</body>
+</html>

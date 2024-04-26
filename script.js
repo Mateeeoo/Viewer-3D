@@ -90,6 +90,8 @@ class GLTFModelViewer extends HTMLElement {
       "Aluminiowe": false,
     }
 
+    
+
     function createToggleButton(parent, data, buttonStyle,callback,)  {
       for (let key in data) {
         let button = document.createElement("button");
@@ -101,9 +103,9 @@ class GLTFModelViewer extends HTMLElement {
           button.classList.add(buttonStyle);
           callback(key);
         });
-        // if (data[key]) {
-        //   button.classList.add(buttonStyle);
-        // }
+        if (data[key]) {
+          button.classList.add(buttonStyle);
+        }
       }
     }
     createToggleButton(this.buttonsColor, painting, "colorButtons", (selectedKey) => {
@@ -151,9 +153,13 @@ class GLTFModelViewer extends HTMLElement {
         // TODO przygotowanie modelu ze zmiana koloru felgi 
     });
 
+    
+
     if (!this.renderer) {
       this.setup();
     }
+
+    // this.togglePartColor(0xA0A29E);
   }
 
   findElementsByPath(name) {
@@ -194,7 +200,7 @@ class GLTFModelViewer extends HTMLElement {
     } else {
         console.error('Nie znaleziono części o nazwie:', name);
     }
-}
+  }
   togglePartVisibility(partName) {
     const part = this.findElementsByPath(partName);
     console.log(part);
@@ -414,6 +420,20 @@ class GLTFModelViewer extends HTMLElement {
         scene.add(plane); 
         plane.receiveShadow = true;
         plane.castShadow=false;
+
+        this.togglePartColor(0xffffff);
+        const obejaStalowa = this.findElementsByPath("Obejma_stal");
+        const obejaAlu = this.findElementsByPath("Obejma_alu");
+
+        obejaStalowa[0].visible = true;
+        obejaAlu[0].visible = false;
+        const rolkiBoczne = this.findElementsByPath("Rolki_boczne_SKW");
+        const plozyBoczne = this.findElementsByPath("Plozy_boczne_SKW");
+        rolkiBoczne[0].visible = false;
+        plozyBoczne[0].visible = true;
+        const koloZapas = this.findElementsByPath("Mocowanie_zapas_SKW")
+        koloZapas[0].visible = true;
+      
       }
     );
   }
